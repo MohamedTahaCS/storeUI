@@ -1,0 +1,41 @@
+<!-- update-store-modal.component.html -->
+
+<div class="modal-container">
+  <h2 class="modal-title">Update Store</h2>
+  <form>
+    <div class="form-field">
+      <mat-form-field>
+        <label>Store Code</label>
+        <input matInput [(ngModel)]="store_code" name="storeCode" disabled />
+      </mat-form-field>
+    </div>
+    <div class="form-field">
+      <mat-form-field>
+        <label>Name</label>
+        <input matInput [(ngModel)]="store_name" name="storeName" />
+      </mat-form-field>
+    </div>
+    <div class="form-field">
+      <mat-form-field>
+        <label>Location</label>
+        <input matInput [(ngModel)]="store_location" name="storeLocation" />
+      </mat-form-field>
+    </div>
+    <div class="form-field">
+      <mat-form-field>
+        <label>Phone Number</label>
+        <input
+          matInput
+          [(ngModel)]="store_phone_number"
+          name="storePhoneNumber"
+        />
+      </mat-form-field>
+    </div>
+  </form>
+  <div class="action-buttons">
+    <button class="mat-raised-button" color="primary" (click)="update()">
+      Update
+    </button>
+    <button class="mat-raised-button" (click)="cancel()">Cancel</button>
+  </div>
+</div>

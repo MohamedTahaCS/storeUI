@@ -1,0 +1,50 @@
+/* add-store-modal.component.css */
+.modal-container {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.form-field {
+  flex: 1;
+  margin-bottom: 15px;
+}
+
+[class^="ng"] {
+  width: 100%;
+}
+
+[class^="mat"] {
+  width: 100%;
+}
+
+.action-buttons {
+  align-items: center;
+  margin-top: 10px;
+  width: 100%;
+}
+
+/* Add custom styles for buttons */
+.mat-raised-button {
+  margin-right: 10px; /* Add some spacing between buttons */
+  padding: 15px;
+  margin-bottom: 10px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  color: #ffffff;
+  background-color: rgb(19, 18, 18);
+  font-size: 16px;
+}
+.mat-raised-button:hover {
+  cursor: pointer;
+  background-color: rgb(0, 0, 0);
+}

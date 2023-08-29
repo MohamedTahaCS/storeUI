@@ -1,0 +1,40 @@
+<nav class="store-navbar">
+  <div class="left-section">
+    <button
+      class="add-store-button styled-button"
+      (click)="openAddStoreModal()"
+    >
+      Add Store
+    </button>
+  </div>
+  <div class="right-section">
+    <input type="text" class="search-input" placeholder="Search..." />
+  </div>
+</nav>
+
+<div *ngIf="loading" class="loading">
+  <h1>Loading...</h1>
+</div>
+
+<div class="store-grid">
+  <div class="store" *ngFor="let store of stores">
+    <div class="store-image">
+      <img src="assets/ss.png" alt="{{ store.name }}" />
+    </div>
+    <p class="store_info big_text">Name: {{ store.name }}</p>
+    <p class="store-info">Location: {{ store.location }}</p>
+    <p class="store-info">Phone: {{ store.phone_number }}</p>
+    <p class="store-info">Store Code: {{ store.code }}</p>
+
+    <button class="styled-button" (click)="showStock(store)">Show Stock</button>
+    <button class="styled-button" (click)="openUpdateStoreModal(store)">
+      Update
+    </button>
+    <button
+      class="styled-button"
+      (click)="openDeleteConfirmationModal(store.code)"
+    >
+      Delete
+    </button>
+  </div>
+</div>
